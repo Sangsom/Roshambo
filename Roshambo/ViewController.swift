@@ -17,7 +17,11 @@ class ViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func selectRock() {
-        
+        var controller: ResultViewController
+
+        controller = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+
+        present(controller, animated: true, completion: nil)
     }
 }
 

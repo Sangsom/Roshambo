@@ -63,7 +63,7 @@
         <!--Result View Controller-->
         <scene sceneID="IZL-M4-uWq">
             <objects>
-                <viewController id="XSd-3B-HpP" userLabel="Result View Controller" customClass="ResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="XSd-3B-HpP" userLabel="Result View Controller" customClass="ResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDu-Co-W9b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
