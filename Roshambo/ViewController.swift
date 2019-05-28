@@ -8,26 +8,6 @@
 
 import UIKit
 
-enum Hand: Int {
-    case rock, paper, scissors
-
-    var value: String {
-        switch self {
-        case .rock:
-            return "rock"
-        case .paper:
-            return "paper"
-        case .scissors:
-            return "scissors"
-        }
-    }
-
-    static func randomHand() -> Hand {
-        let randomNumber = Int.random(in: 0...2)
-        return Hand(rawValue: randomNumber)!
-    }
-}
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -43,7 +23,7 @@ class ViewController: UIViewController {
         controller = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
 
         controller.playerHand = Hand.rock
-        controller.opponentHand = randomHand()
+        controller.opponentHand = Hand.randomHand()
         present(controller, animated: true, completion: nil)
     }
 
