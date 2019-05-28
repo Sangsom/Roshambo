@@ -58,6 +58,5 @@ class ViewController: UIViewController {
         let randomNumber = Int.random(in: 0...2)
         return Hand(rawValue: randomNumber)
     }
-
 }
 

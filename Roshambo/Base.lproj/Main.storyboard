@@ -38,6 +38,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-vT-Zt3" userLabel="scissors">
                                         <rect key="frame" x="0.0" y="484" width="227" height="227"/>
                                         <state key="normal" image="scissors"/>
+                                        <connections>
+                                            <segue destination="XSd-3B-HpP" kind="presentation" identifier="selectScissors" id="HaA-kA-LKh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
@@ -116,6 +119,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-Gn-sYZ">
                                 <rect key="frame" x="171.5" y="572.5" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="XSd-3B-HpP" eventType="touchUpInside" id="bxk-oH-yUG"/>
+                                    <action selector="playAgain:" destination="PMT-5B-aR4" eventType="touchUpInside" id="vfw-e1-Fqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,6 +144,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDI-v4-38f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PMT-5B-aR4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="20.758928571428569"/>
         </scene>
@@ -146,4 +154,7 @@
         <image name="rock" width="227" height="227"/>
         <image name="scissors" width="227" height="227"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KWI-t0-2FY"/>
+    </inferredMetricsTieBreakers>
 </document>
