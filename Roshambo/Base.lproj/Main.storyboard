@@ -88,8 +88,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-PT-aD3">
                                         <rect key="frame" x="197" y="0.0" width="197" height="148.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-FM-LbT">
-                                                <rect key="frame" x="85.5" y="0.0" width="26.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-FM-LbT">
+                                                <rect key="frame" x="60.5" y="0.0" width="76.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -101,16 +101,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Paper beats Stone. You win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Le-ZS-cWJ">
-                                <rect key="frame" x="100" y="590" width="214" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Le-ZS-cWJ">
+                                <rect key="frame" x="207" y="542.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-Gn-sYZ">
-                                <rect key="frame" x="172" y="654" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-Gn-sYZ">
+                                <rect key="frame" x="171.5" y="572.5" width="71" height="30"/>
                                 <state key="normal" title="Play Again"/>
                             </button>
                         </subviews>
@@ -119,12 +117,17 @@
                             <constraint firstItem="qF0-b4-C2l" firstAttribute="centerY" secondItem="kDu-Co-W9b" secondAttribute="centerY" id="86E-iD-G3r"/>
                             <constraint firstAttribute="trailing" secondItem="qF0-b4-C2l" secondAttribute="trailing" constant="10" id="9uc-jz-RHr"/>
                             <constraint firstItem="qF0-b4-C2l" firstAttribute="leading" secondItem="kDu-Co-W9b" secondAttribute="leading" constant="10" id="PJ2-o9-Byu"/>
+                            <constraint firstItem="ZIJ-Gn-sYZ" firstAttribute="top" secondItem="qF0-b4-C2l" secondAttribute="bottom" constant="50" id="SO1-Y5-dex"/>
+                            <constraint firstItem="2Le-ZS-cWJ" firstAttribute="top" secondItem="qF0-b4-C2l" secondAttribute="bottom" constant="20" id="XFh-hI-F4F"/>
+                            <constraint firstItem="2Le-ZS-cWJ" firstAttribute="centerX" secondItem="kDu-Co-W9b" secondAttribute="centerX" id="ZSP-8o-yih"/>
+                            <constraint firstItem="ZIJ-Gn-sYZ" firstAttribute="centerX" secondItem="kDu-Co-W9b" secondAttribute="centerX" id="k9Z-8k-AUB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Glw-hj-2Qx"/>
                     </view>
                     <connections>
                         <outlet property="opponentImage" destination="jqi-1W-9jT" id="JFe-Td-8y5"/>
                         <outlet property="playerImage" destination="tRt-be-UC1" id="qyo-w0-T8Y"/>
+                        <outlet property="resultLabel" destination="2Le-ZS-cWJ" id="sHy-Ze-pFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDI-v4-38f" userLabel="First Responder" sceneMemberID="firstResponder"/>

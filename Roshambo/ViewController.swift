@@ -39,9 +39,6 @@ class ViewController: UIViewController {
         controller.playerHand = Hand.rock
         controller.opponentHand = randomHand()
         present(controller, animated: true, completion: nil)
-
-        // TODO: Set text label
-        // Generate computer hand and show
     }
 
     func randomHand() -> Hand?{
