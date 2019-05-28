@@ -15,9 +15,9 @@ class ResultViewController: UIViewController {
     @IBOutlet var playerImage: UIImageView!
     @IBOutlet var opponentImage: UIImageView!
     @IBOutlet var resultLabel: UILabel!
+
     var playerHand: Hand?
     var opponentHand: Hand?
-
     // MARK: Methods
 
     override func viewDidLoad() {
@@ -32,6 +32,7 @@ class ResultViewController: UIViewController {
             playerImage.image = nil
             playerImage.image = nil
         }
+
     }
 
     func compareHands(_ h1: Hand, _ h2: Hand) -> String {
