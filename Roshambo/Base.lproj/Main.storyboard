@@ -69,10 +69,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qF0-b4-C2l">
-                                <rect key="frame" x="10" y="324.5" width="394" height="247.5"/>
+                                <rect key="frame" x="10" y="374" width="394" height="148.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Myl-QO-KQ4">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZv-WW-EQl">
                                                 <rect key="frame" x="84" y="0.0" width="29" height="20.5"/>
@@ -80,13 +80,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-Ga-95o" userLabel="User Image View">
-                                                <rect key="frame" x="0.0" y="20.5" width="197" height="227"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tRt-be-UC1">
+                                                <rect key="frame" x="0.0" y="20.5" width="197" height="128"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-PT-aD3">
-                                        <rect key="frame" x="197" y="0.0" width="197" height="247.5"/>
+                                        <rect key="frame" x="197" y="0.0" width="197" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-FM-LbT">
                                                 <rect key="frame" x="85.5" y="0.0" width="26.5" height="20.5"/>
@@ -94,8 +94,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="MO8-AB-aOH" userLabel="Bot Image View">
-                                                <rect key="frame" x="0.0" y="20.5" width="197" height="227"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jqi-1W-9jT">
+                                                <rect key="frame" x="0.0" y="20.5" width="197" height="128"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
@@ -113,11 +113,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Again"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iz5-1M-dUe">
-                                <rect key="frame" x="197" y="138" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -127,6 +122,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Glw-hj-2Qx"/>
                     </view>
+                    <connections>
+                        <outlet property="opponentImage" destination="jqi-1W-9jT" id="JFe-Td-8y5"/>
+                        <outlet property="playerImage" destination="tRt-be-UC1" id="qyo-w0-T8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDI-v4-38f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

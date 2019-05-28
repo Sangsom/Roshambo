@@ -10,10 +10,21 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    @IBOutlet var playerImage: UIImageView!
+    @IBOutlet var opponentImage: UIImageView!
+    var playerHand: Hand?
+    var opponentHand: Hand?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let playerHand = playerHand {
+            playerImage.image = UIImage(named: playerHand.value)
+        }
+
+        if let opponentHand = opponentHand {
+            opponentImage.image = UIImage(named: opponentHand.value)
+        }
     }
 
 }
