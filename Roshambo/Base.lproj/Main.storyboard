@@ -21,15 +21,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-aJ-hdv" userLabel="Images Stack View">
                                 <rect key="frame" x="93.5" y="92.5" width="227" height="711"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-iu-x3a" userLabel="rock">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qys-Di-gr2" userLabel="rock">
                                         <rect key="frame" x="0.0" y="0.0" width="227" height="227"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock" translatesAutoresizingMaskIntoConstraints="NO" id="VW9-pE-AJI" userLabel="paper">
+                                        <state key="normal" image="rock"/>
+                                        <connections>
+                                            <action selector="selectRock" destination="BYZ-38-t0r" eventType="touchUpInside" id="LwN-8B-fEW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz4-yB-998" userLabel="paper">
                                         <rect key="frame" x="0.0" y="242" width="227" height="227"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scissors" translatesAutoresizingMaskIntoConstraints="NO" id="D9x-vi-yIP" userLabel="scissors">
+                                        <state key="normal" image="paper"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-vT-Zt3" userLabel="scissors">
                                         <rect key="frame" x="0.0" y="484" width="227" height="227"/>
-                                    </imageView>
+                                        <state key="normal" image="scissors"/>
+                                    </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
@@ -49,11 +55,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="paper" destination="VW9-pE-AJI" id="olg-xW-NT7"/>
-                        <outlet property="rock" destination="aqn-iu-x3a" id="f7w-wT-xon"/>
-                        <outlet property="scissors" destination="D9x-vi-yIP" id="Abv-zb-Ini"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +113,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Again"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iz5-1M-dUe">
+                                <rect key="frame" x="197" y="138" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -124,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDI-v4-38f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="890" y="21"/>
+            <point key="canvasLocation" x="889.85507246376824" y="20.758928571428569"/>
         </scene>
     </scenes>
     <resources>
