@@ -22,6 +22,7 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        opponentHand = Hand.randomHand()
 
         if let playerHand = playerHand, let opponentHand = opponentHand {
             playerImage.image = UIImage(named: playerHand.value)

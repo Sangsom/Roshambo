@@ -23,10 +23,8 @@ class ViewController: UIViewController {
         controller = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
 
         controller.playerHand = Hand.rock
-        controller.opponentHand = Hand.randomHand()
         present(controller, animated: true, completion: nil)
     }
-
 
     @IBAction func selectPaper(_ sender: UIButton) {
         performSegue(withIdentifier: "selectPaper", sender: sender)
@@ -35,9 +33,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Code & Segue
         let controller = segue.destination as! ResultViewController
-
         controller.playerHand = getHand(sender as! UIButton)
-        controller.opponentHand = Hand.randomHand()
     }
 
     func getHand(_ sender: UIButton) -> Hand {
