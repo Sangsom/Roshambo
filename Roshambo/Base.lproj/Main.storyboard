@@ -31,6 +31,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz4-yB-998" userLabel="paper">
                                         <rect key="frame" x="0.0" y="242" width="227" height="227"/>
                                         <state key="normal" image="paper"/>
+                                        <connections>
+                                            <action selector="selectPaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRT-7m-SjV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-vT-Zt3" userLabel="scissors">
                                         <rect key="frame" x="0.0" y="484" width="227" height="227"/>
@@ -55,6 +58,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="XSd-3B-HpP" kind="presentation" identifier="selectPaper" id="KWI-t0-2FY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

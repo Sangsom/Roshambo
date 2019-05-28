@@ -32,6 +32,7 @@ class ViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func selectRock() {
+        // Code only change VC
         var controller: ResultViewController
 
         controller = self.storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
@@ -39,6 +40,18 @@ class ViewController: UIViewController {
         controller.playerHand = Hand.rock
         controller.opponentHand = randomHand()
         present(controller, animated: true, completion: nil)
+    }
+
+    @IBAction func selectPaper() {
+        performSegue(withIdentifier: "selectPaper", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Code & Segue
+        let controller = segue.destination as! ResultViewController
+
+        controller.playerHand = Hand.paper
+        controller.opponentHand = randomHand()
     }
 
     func randomHand() -> Hand?{

@@ -31,7 +31,6 @@ class ResultViewController: UIViewController {
             playerImage.image = nil
             playerImage.image = nil
         }
-
     }
 
     func compareHands(_ h1: Hand, _ h2: Hand) -> String {
