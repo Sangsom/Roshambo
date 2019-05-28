@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func selectRock() {
-        print("Selected rock")
+        
     }
 }
 
