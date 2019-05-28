@@ -28,14 +28,14 @@
                                             <action selector="selectRock" destination="BYZ-38-t0r" eventType="touchUpInside" id="LwN-8B-fEW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz4-yB-998" userLabel="paper">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz4-yB-998" userLabel="paper">
                                         <rect key="frame" x="0.0" y="242" width="227" height="227"/>
                                         <state key="normal" image="paper"/>
                                         <connections>
-                                            <action selector="selectPaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="aRT-7m-SjV"/>
+                                            <action selector="selectPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8e-9t-eYU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-vT-Zt3" userLabel="scissors">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybc-vT-Zt3" userLabel="scissors">
                                         <rect key="frame" x="0.0" y="484" width="227" height="227"/>
                                         <state key="normal" image="scissors"/>
                                         <connections>

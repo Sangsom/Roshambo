@@ -21,6 +21,11 @@ enum Hand: Int {
             return "scissors"
         }
     }
+
+    static func randomHand() -> Hand {
+        let randomNumber = Int.random(in: 0...2)
+        return Hand(rawValue: randomNumber)!
+    }
 }
 
 class ViewController: UIViewController {
@@ -42,21 +47,26 @@ class ViewController: UIViewController {
         present(controller, animated: true, completion: nil)
     }
 
-    @IBAction func selectPaper() {
-        performSegue(withIdentifier: "selectPaper", sender: self)
+
+    @IBAction func selectPaper(_ sender: UIButton) {
+        performSegue(withIdentifier: "selectPaper", sender: sender)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Code & Segue
         let controller = segue.destination as! ResultViewController
 
-        controller.playerHand = Hand.paper
-        controller.opponentHand = randomHand()
+        controller.playerHand = getHand(sender as! UIButton)
+        controller.opponentHand = Hand.randomHand()
     }
 
-    func randomHand() -> Hand?{
-        let randomNumber = Int.random(in: 0...2)
-        return Hand(rawValue: randomNumber)
+    func getHand(_ sender: UIButton) -> Hand {
+        if sender.tag == 1 {
+            return Hand.paper
+        } else {
+            return Hand.scissors
+        }
     }
+
 }
 
